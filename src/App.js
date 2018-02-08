@@ -29,7 +29,7 @@ const Navigator = StackNavigator(
     }
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Home',
     headerMode: 'none'
   }
 );

@@ -1,5 +1,5 @@
 import commonColor from "../theme/variables/commonColor";
-import { Dimensions }  from "react-native";
+import { Dimensions } from "react-native";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
