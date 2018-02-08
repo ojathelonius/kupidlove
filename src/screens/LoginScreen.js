@@ -32,7 +32,7 @@ class LoginScreen extends React.Component {
               </Text>
               <View style={styles.swiperImageView}>
                 <Image
-                  source={require("../../assets/profil.jpg")}
+                  source={require("../../assets/login_demo1.jpg")}
                   style={styles.profilImage}
                 />
               </View>
@@ -40,11 +40,35 @@ class LoginScreen extends React.Component {
 
             <View style={styles.swiperSlidesView}>
               <Text style={styles.loginText}>
-                Découvrez des personnes intéressantes autour de vous !
+                Vous pouvez anonymement liker ou passer des personnes.
               </Text>
               <View style={styles.swiperImageView}>
                 <Image
-                  source={require("../../assets/profil.jpg")}
+                  source={require("../../assets/login_demo2.jpg")}
+                  style={styles.profilImage}
+                />
+              </View>
+            </View>
+
+            <View style={styles.swiperSlidesView}>
+              <Text style={styles.loginText}>
+                Quand quelqu'un vous like, c'est...
+              </Text>
+              <View style={styles.swiperImageView}>
+                <Image
+                  source={require("../../assets/login_demo3.jpg")}
+                  style={styles.profilImage}
+                />
+              </View>
+            </View>
+
+            <View style={styles.swiperSlidesView}>
+              <Text style={styles.loginText}>
+                Discutez et apprenez à connaître vos matchs !
+              </Text>
+              <View style={styles.swiperImageView}>
+                <Image
+                  source={require("../../assets/login_demo4.jpg")}
                   style={styles.profilImage}
                 />
               </View>

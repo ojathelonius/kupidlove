@@ -45,8 +45,7 @@ export default {
   },
   profilImage: {
     height: deviceHeight / 2.5,
-    width: deviceWidth / 1.7,
-    marginBottom: 30
+    width: deviceWidth / 1.5
   },
   loginBtn: {
     width: deviceWidth - 60,
