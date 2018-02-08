@@ -19,14 +19,14 @@ class LoginScreen extends React.Component {
           }
           barStyle="dark-content"
         />
-        <Content scrollEnabled={false}>
+        <Content scrollEnabled={false} contentContainerStyle={styles.contentStyle}>
           <Swiper
-            height={deviceHeight / 1.3}
+            style={styles.swiperStyle}
             loop={false}
             dot={<View style={styles.swiperDot} />}
             activeDot={<View style={styles.swiperActiveDot} />}
           >
-            <View style={styles.swiperSlidesView}>
+            <View style={styles.swiperSlidesView} >
               <Text style={styles.loginText}>
                 Découvrez des personnes intéressantes autour de vous !
               </Text>
@@ -73,8 +73,18 @@ class LoginScreen extends React.Component {
                 />
               </View>
             </View>
-            
+
           </Swiper>
+
+            <Button block rounded style={styles.fbLoginBtn}>
+              <Text style={styles.loginBtnText}>Se connecter par Facebook</Text>
+            </Button>
+            <Button block rounded style={styles.instaLoginBtn}>
+              <Text style={styles.loginBtnText}>Se connecter par Instagram</Text>
+            </Button>
+            <Button block transparent rounded style={styles.emailLoginBtn}>
+              <Text style={styles.emailLoginBtnText}>Se connecter par e-mail</Text>
+            </Button>
         </Content>
 
         <View style={styles.noteView}>

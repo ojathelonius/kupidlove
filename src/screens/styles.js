@@ -4,6 +4,9 @@ const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 export default {
+  swiperStyle: {
+    height: deviceHeight / 1.3
+  },
   swiperDot: {
     backgroundColor: "rgba(0,0,0,.2)",
     width: 10,
@@ -12,7 +15,7 @@ export default {
     marginLeft: 3,
     marginRight: 3,
     marginTop: 3,
-    marginBottom: 20
+    marginBottom: 30
   },
   swiperActiveDot: {
     backgroundColor: commonColor.brandPrimary,
@@ -22,7 +25,7 @@ export default {
     marginLeft: 3,
     marginRight: 3,
     marginTop: 3,
-    marginBottom: 20
+    marginBottom: 30
   },
   swiperSlidesView: {
     flex: 1,
@@ -47,14 +50,30 @@ export default {
     height: deviceHeight / 2.5,
     width: deviceWidth / 1.5
   },
-  loginBtn: {
-    width: deviceWidth - 60,
+  fbLoginBtn: {
+    width: deviceWidth - 90,
     alignSelf: "center",
-    backgroundColor: "#3B5998"
+    backgroundColor: "#D80A21"
+  },
+  instaLoginBtn: {
+    width: deviceWidth - 90,
+    alignSelf: "center",
+    backgroundColor: "#A00002",
+    marginTop: 10
+  },
+  emailLoginBtn: {
+    width: deviceWidth - 90,
+    alignSelf: "center",
+    marginTop: 10
   },
   loginBtnText: {
     fontSize: 15,
     fontWeight: "500"
+  },
+  emailLoginBtnText: {
+    fontSize: 15,
+    fontWeight: "500",
+    color: "#A00002"
   },
   noteView: {
     marginHorizontal: 30,
@@ -64,5 +83,9 @@ export default {
     color: commonColor.lightTextColor,
     fontSize: 12,
     textAlign: "center"
+  },
+  contentStyle: {
+    justifyContent: "center",
+    flex: 1
   }
 };
