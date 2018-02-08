@@ -1,14 +1,14 @@
 import React from 'react';
 import { ImageBackground, View } from 'react-native';
 import { Content, Text, Button, Icon } from "native-base";
-import style from "./home/style";
+import style from "./HomeStyle.js";
 
 class HomeScreen extends React.Component {
   render() {
     return (
       <Content contentContainerStyle={style.container} scrollEnabled={false}>
         <ImageBackground
-          source={require("../../assets/boot.jpg")}
+          source={require("../../../assets/boot.jpg")}
           style={style.backgroundImage}>
           <View style={style.iconContainer}>
             <Icon name='logo-facebook' style={style.fbIcon} />

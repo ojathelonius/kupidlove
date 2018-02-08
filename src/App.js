@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import HomeScreen from './screens/HomeScreen';
-import SearchScreen from './screens/SearchScreen';
-import LoginScreen from './screens/LoginScreen';
+import HomeScreen from './screens/home/HomeScreen';
+import SearchScreen from './screens/search/SearchScreen';
+import LoginScreen from './screens/login/LoginScreen';
 import configureStore from './setup/configureStore';
 import * as Expo from "expo";
 

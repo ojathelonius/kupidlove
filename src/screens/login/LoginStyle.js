@@ -1,11 +1,11 @@
-import commonColor from "../theme/variables/commonColor";
+import commonColor from "../../theme/variables/commonColor";
 import { Dimensions } from "react-native";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 export default {
   swiperStyle: {
-    height: deviceHeight / 1.3
+    height: deviceHeight / 2
   },
   swiperDot: {
     backgroundColor: "rgba(0,0,0,.2)",
@@ -27,24 +27,12 @@ export default {
     marginTop: 3,
     marginBottom: 30
   },
-  swiperSlidesView: {
-    flex: 1,
-    marginHorizontal: 40,
-    justifyContent: "center",
-    alignItems: "center"
-  },
   loginText: {
     fontSize: 18,
     color: commonColor.contentTextColor,
     fontWeight: "700",
     textAlign: "center",
     marginVertical: 10
-  },
-  swiperImageView: {
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#ccc",
-    overflow: "hidden"
   },
   profilImage: {
     height: deviceHeight / 2.5,
@@ -87,5 +75,11 @@ export default {
   contentStyle: {
     justifyContent: "center",
     flex: 1
+  },
+  swiperView: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginHorizontal: 5
   }
 };
