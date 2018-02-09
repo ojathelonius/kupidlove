@@ -11,7 +11,15 @@ class LoginMailScreen extends React.Component {
   render() {
     return (
       <Container>
-        <View style={style.contentStyle}>
+        <StatusBar
+          backgroundColor={
+            Platform.OS === "android"
+              ? commonColor.statusBarColor
+              : "transparent"
+          }
+          barStyle="dark-content"
+        />
+        <View style={style.viewStyle}>
           <H2 style={style.textHeader}>Pas fan des réseaux sociaux ? Connectez-vous par e-mail !</H2>
           <Form>
             <Item floatingLabel>
@@ -25,7 +33,7 @@ class LoginMailScreen extends React.Component {
             <Button block rounded style={style.emailLoginBtn}>
               <Text style={style.loginBtnText}>Connexion</Text>
             </Button>
-            <BackButton navigation={this.props.navigation}/>
+            <BackButton navigation={this.props.navigation} />
           </Form>
         </View>
       </Container>

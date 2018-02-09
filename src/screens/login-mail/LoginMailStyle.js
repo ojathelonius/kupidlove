@@ -4,7 +4,7 @@ const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 export default {
-  contentStyle: {
+  viewStyle: {
     flex: 1,
     justifyContent: 'center',
     marginHorizontal: 10
