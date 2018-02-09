@@ -4,6 +4,7 @@ import { StackNavigator } from 'react-navigation';
 import HomeScreen from './screens/home/HomeScreen';
 import SearchScreen from './screens/search/SearchScreen';
 import LoginScreen from './screens/login/LoginScreen';
+import LoginMailScreen from './screens/login-mail/LoginMailScreen';
 import configureStore from './setup/configureStore';
 import * as Expo from "expo";
 
@@ -26,6 +27,9 @@ const Navigator = StackNavigator(
     },
     Login: {
       screen: LoginScreen
+    },
+    LoginMail: {
+      screen: LoginMailScreen
     }
   },
   {

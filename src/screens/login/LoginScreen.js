@@ -74,7 +74,7 @@ class LoginScreen extends React.Component {
           <Button block rounded style={style.instaLoginBtn}>
             <Text style={style.loginBtnText}>Se connecter par Instagram</Text>
           </Button>
-          <Button block transparent rounded style={style.emailLoginBtn}>
+          <Button block transparent rounded style={style.emailLoginBtn} onPress={() => this.props.navigation.navigate('LoginMail')}>
             <Text style={style.emailLoginBtnText}>Se connecter par e-mail</Text>
           </Button>
         </View>
