@@ -23,3 +23,11 @@ Utiliser [Expo XDE](https://docs.expo.io/versions/latest/introduction/installati
 ### Avec le CLI exp
 
 `sudo exp start`
+
+## Troubleshoot
+
+### Chargement du bundle infini
+Désactiver le remote debugging sur le mobile. Si il n'arrive pas à y accéder (ex : CORS interdit), il ne buildera pas l'application.
+
+### Unexpected token '...' dans AppEntry.bundle
+Il y a probablement un élément {this.props.x} utilisé directement dans un component.
