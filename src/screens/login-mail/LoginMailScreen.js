@@ -29,7 +29,7 @@ class LoginMailScreen extends React.Component {
               <Label>Adresse e-mail</Label>
               <Input keyboardType='email-address' uppercase={false} autoCapitalize='none' />
             </Item>
-            <Field name="password" component={FormInput} itemProps={{ last: true, floatingLabel: true }} inputProps={{ secureTextEntry: true }} />
+            <Field name="password" component={FormInput} label='Mot de passe' itemProps={{ last: true, floatingLabel: true }} inputProps={{ secureTextEntry: true }} />
             <Button block rounded style={style.emailLoginBtn}>
               <Text style={style.loginBtnText}>Connexion</Text>
             </Button>

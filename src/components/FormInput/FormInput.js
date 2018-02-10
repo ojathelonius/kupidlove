@@ -9,9 +9,12 @@ class FormInput extends React.Component {
      */
 
     render() {
+
+        const label = this.props.label;
+        
         return (
             <Item {...this.props.itemProps}>
-                <Label>{...this.props.label}</Label>
+                <Label>{label}</Label>
                 <Input {...this.props.inputProps} />
             </Item>
         );
