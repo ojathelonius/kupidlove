@@ -1,14 +1,17 @@
 import React from 'react';
 import { Dimensions, Image, StatusBar, Platform } from "react-native";
 import { View, Container, Header, Content, Form, Item, Input, Label, H2, Button, Text, Icon, Title } from 'native-base';
+import { Field, reduxForm } from 'redux-form';
 import style from "./LoginMailStyle.js";
 import commonColor from "../../theme/variables/commonColor";
 import BackButton from '../../components/BackButton/BackButton';
+import FormInput from '../../components/FormInput/FormInput';
 
 var deviceHeight = Dimensions.get("window").height;
 
 class LoginMailScreen extends React.Component {
   render() {
+
     return (
       <Container>
         <StatusBar
@@ -26,10 +29,7 @@ class LoginMailScreen extends React.Component {
               <Label>Adresse e-mail</Label>
               <Input keyboardType='email-address' uppercase={false} autoCapitalize='none' />
             </Item>
-            <Item floatingLabel last>
-              <Label>Mot de passe</Label>
-              <Input secureTextEntry />
-            </Item>
+            <Field name="password" component={FormInput} itemProps={{ last: true, floatingLabel: true }} inputProps={{ secureTextEntry: true }} />
             <Button block rounded style={style.emailLoginBtn}>
               <Text style={style.loginBtnText}>Connexion</Text>
             </Button>
@@ -41,4 +41,6 @@ class LoginMailScreen extends React.Component {
   }
 }
 
-export default LoginMailScreen;
+export default reduxForm({
+  form: 'LoginMail',
+})(LoginMailScreen)

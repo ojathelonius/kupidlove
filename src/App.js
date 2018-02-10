@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import { Provider } from "react-redux";
+import { Provider } from 'react-redux';
 import HomeScreen from './screens/home/HomeScreen';
 import SearchScreen from './screens/search/SearchScreen';
 import LoginScreen from './screens/login/LoginScreen';
