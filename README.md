@@ -30,4 +30,6 @@ Utiliser [Expo XDE](https://docs.expo.io/versions/latest/introduction/installati
 Désactiver le remote debugging sur le mobile. Si il n'arrive pas à y accéder (ex : CORS interdit), il ne buildera pas l'application.
 
 ### Unexpected token '...' dans AppEntry.bundle
-Il y a probablement un élément {this.props.x} utilisé directement dans un component.
+Il y a probablement un élément dans un composant utilisé avec un opérateur destructurant (...) utilisé sur un objet primitif.
+
+`{...this.props.value}` renvoie une erreur si value est de type primitif.
