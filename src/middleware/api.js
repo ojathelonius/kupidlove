@@ -7,7 +7,10 @@ export default class Api {
 
     }
 
-    // TODO : Handle errors
+    /**
+     * Includes headers and status
+     * TODO : handle error
+     */
     static post(route, body) {
         return fetch('https://dev.johanet.fr/api' + route, {
             method: 'POST',
@@ -16,10 +19,12 @@ export default class Api {
                 'Content-Type': 'application/json'
             }
         })
-            .then((response) => response.json())
+            .then(res => res.json().then(json => ({
+                headers: res.headers,
+                status: res.status,
+                json
+            })))
             .catch((error) => console.log(error));
-
-
     }
 
 }
