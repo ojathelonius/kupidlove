@@ -10,16 +10,13 @@ class FormInput extends React.Component {
      */
 
     render() {
-        /**
-         * It seems necessary to add a marginLeft and marginTop of 15 as these properties are lost when passing this component in a Field component
-         */
-        const label = this.props.label;
-
+        // It seems necessary to add a marginLeft and marginTop of 15 as these properties are lost when passing this component in a Field component
+        
         return (
             <View>
                 <Item {...this.props.itemProps} style={style.itemStyle}>
-                    <Label>{label}</Label>
-                    <Input {...this.props.inputProps}/>
+                    <Label>{this.props.label}</Label>
+                    <Input {...this.props.inputProps} onChangeText={this.props.onChange} name={this.props.name} {...this.props.input} />
                 </Item>
             </View>
         );

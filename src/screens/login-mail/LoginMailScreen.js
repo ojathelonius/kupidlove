@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Dimensions, Image, StatusBar, Platform } from "react-native";
 import { View, Container, Header, Content, Form, Item, Input, Label, H2, Button, Text, Icon, Title } from 'native-base';
 import { Field, reduxForm } from 'redux-form';
@@ -6,10 +7,17 @@ import style from "./LoginMailStyle.js";
 import commonColor from "../../theme/variables/commonColor";
 import BackButton from '../../components/BackButton/BackButton';
 import FormInput from '../../components/FormInput/FormInput';
+import { loginEmail } from '../../actions/authActions';
 
 var deviceHeight = Dimensions.get("window").height;
 
+/* Component */
 class LoginMailScreen extends React.Component {
+
+  submit(input, dispatch, props) {
+    dispatch(loginEmail(input.email, input.password));
+  }
+
   render() {
 
     return (
@@ -27,7 +35,7 @@ class LoginMailScreen extends React.Component {
           <Form>
             <Field name="email" component={FormInput} label='Adresse e-mail' itemProps={{ floatingLabel: true }} inputProps={{ keyboardType: 'email-address', uppercase: false, autoCapitalize: 'none' }} />
             <Field name="password" component={FormInput} label='Mot de passe' itemProps={{ floatingLabel: true }} inputProps={{ secureTextEntry: true }} />
-            <Button block rounded style={style.emailLoginBtn}>
+            <Button onPress={this.props.handleSubmit(this.submit)} block rounded style={style.emailLoginBtn} >
               <Text style={style.loginBtnText}>Connexion</Text>
             </Button>
             <BackButton navigation={this.props.navigation} />
@@ -39,5 +47,6 @@ class LoginMailScreen extends React.Component {
 }
 
 export default reduxForm({
-  form: 'LoginMail',
-})(LoginMailScreen)
+  form: 'LoginMail'
+})(LoginMailScreen);
+
