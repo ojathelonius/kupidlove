@@ -33,3 +33,6 @@ Désactiver le remote debugging sur le mobile. Si il n'arrive pas à y accéder 
 Il y a probablement un élément dans un composant utilisé avec un opérateur destructurant (...) utilisé sur un objet primitif.
 
 `{...this.props.value}` renvoie une erreur si value est de type primitif.
+
+### Impossible d'accéder aux redux-devtools depuis Chrome
+Utiliser l'extension [Allow CORS](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi/related?hl=en).

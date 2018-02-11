@@ -1,5 +1,6 @@
 import React from 'react';
-import { Input, Item, Label} from 'native-base';
+import { Input, Item, Label, View } from 'native-base';
+import style from './FormInputStyle';
 
 class FormInput extends React.Component {
 
@@ -9,14 +10,18 @@ class FormInput extends React.Component {
      */
 
     render() {
-
+        /**
+         * It seems necessary to add a marginLeft and marginTop of 15 as these properties are lost when passing this component in a Field component
+         */
         const label = this.props.label;
-        
+
         return (
-            <Item {...this.props.itemProps}>
-                <Label>{label}</Label>
-                <Input {...this.props.inputProps} />
-            </Item>
+            <View>
+                <Item {...this.props.itemProps} style={style.itemStyle}>
+                    <Label>{label}</Label>
+                    <Input {...this.props.inputProps}/>
+                </Item>
+            </View>
         );
     }
 }

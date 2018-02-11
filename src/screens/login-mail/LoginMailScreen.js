@@ -25,11 +25,8 @@ class LoginMailScreen extends React.Component {
         <View style={style.viewStyle}>
           <H2 style={style.textHeader}>Pas fan des réseaux sociaux ? Connectez-vous par e-mail !</H2>
           <Form>
-            <Item floatingLabel>
-              <Label>Adresse e-mail</Label>
-              <Input keyboardType='email-address' uppercase={false} autoCapitalize='none' />
-            </Item>
-            <Field name="password" component={FormInput} label='Mot de passe' itemProps={{ last: true, floatingLabel: true }} inputProps={{ secureTextEntry: true }} />
+            <Field name="email" component={FormInput} label='Adresse e-mail' itemProps={{ floatingLabel: true }} inputProps={{ keyboardType: 'email-address', uppercase: false, autoCapitalize: 'none' }} />
+            <Field name="password" component={FormInput} label='Mot de passe' itemProps={{ floatingLabel: true }} inputProps={{ secureTextEntry: true }} />
             <Button block rounded style={style.emailLoginBtn}>
               <Text style={style.loginBtnText}>Connexion</Text>
             </Button>
