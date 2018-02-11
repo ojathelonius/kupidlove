@@ -12,15 +12,15 @@ export const loginEmail = (email, password) => ((dispatch) => {
 
     api.post('/auth/login', body)
         .then(response => {
-            if (response.status == 200 && response.data.jwtAccessToken) {
-                storage.store('jwt', response.data.jwtAccessToken)
-                    .then((result) => result)
-                    .catch((error) => error);
+            if (response.status == 200 && response.json.data.jwtAccessToken) {
+                storage.store('jwt', response.json.data.jwtAccessToken)
+                    .then(() => {})
+                    .catch((error) => console.log(error));
             } else if (response.status == 401) {
                 dispatch(showAlert('Erreur', 'Identifiants incorrects.'))
             } else {
                 dispatch(showAlert('Erreur', 'Erreur serveur.'))
             }
-        }
-        );
+        })
+        .catch((error) => dispatch(showAlert('Erreur', `Erreur lors de l'envoi de la requête.`)));
 })
