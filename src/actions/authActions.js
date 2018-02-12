@@ -3,6 +3,7 @@ import storage from '../middleware/storage';
 import fetch from 'whatwg-fetch';
 import * as actions from '../const/actions';
 import { showAlert } from './uiActions';
+import navService from '../middleware/navService';
 
 export const loginEmail = (email, password) => ((dispatch) => {
     const body = {
@@ -14,7 +15,7 @@ export const loginEmail = (email, password) => ((dispatch) => {
         .then(response => {
             if (response.status == 200 && response.json.data.jwtAccessToken) {
                 storage.store('jwt', response.json.data.jwtAccessToken)
-                    .then(() => {})
+                    .then(() => navService.navigate('Search'))
                     .catch((error) => console.log(error));
             } else if (response.status == 401) {
                 dispatch(showAlert('Erreur', 'Identifiants incorrects.'))

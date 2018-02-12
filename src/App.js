@@ -8,6 +8,7 @@ import LoginScreen from './screens/login/LoginScreen';
 import LoginMailScreen from './screens/login-mail/LoginMailScreen';
 import configureStore from './setup/configureStore';
 import * as Expo from "expo";
+import navService from './middleware/navService';
 
 const styles = StyleSheet.create({
   container: {
@@ -65,7 +66,9 @@ class App extends React.Component {
     }
     return (
       <Provider store={this.state.store}>
-        <Navigator />
+        <Navigator ref={navigatorRef => {
+          navService.setContainer(navigatorRef);
+        }}/>
       </Provider>
     );
   }
