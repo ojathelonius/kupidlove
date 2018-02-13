@@ -6,6 +6,7 @@ import HomeScreen from './screens/home/HomeScreen';
 import SearchScreen from './screens/search/SearchScreen';
 import LoginScreen from './screens/login/LoginScreen';
 import LoginMailScreen from './screens/login-mail/LoginMailScreen';
+import HubScreen from './screens/hub/HubScreen';
 import configureStore from './setup/configureStore';
 import * as Expo from "expo";
 import navService from './middleware/navService';
@@ -32,6 +33,9 @@ const Navigator = StackNavigator(
     },
     LoginMail: {
       screen: LoginMailScreen
+    },
+    Hub: {
+      screen: HubScreen
     }
   },
   {

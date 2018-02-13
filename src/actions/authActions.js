@@ -15,7 +15,7 @@ export const loginEmail = (email, password) => ((dispatch) => {
         .then(response => {
             if (response.status == 200 && response.json.data.jwtAccessToken) {
                 storage.store('jwt', response.json.data.jwtAccessToken)
-                    .then(() => navService.navigate('Search'))
+                    .then(() => navService.navigate('Hub'))
                     .catch((error) => console.log(error));
             } else if (response.status == 401) {
                 dispatch(showAlert('Erreur', 'Identifiants incorrects.'))

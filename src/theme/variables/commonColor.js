@@ -272,5 +272,6 @@ export default {
   deviceHeight,
 
   // New Variable
-  inputGroupRoundedBorderRadius: 30
+  inputGroupRoundedBorderRadius: 30,
+  darkGrey: '#CBD0D3'
 };
