@@ -1,10 +1,10 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
-import ProfileScreen from '../profile/ProfileScreen';
-import EditProfileScreen from '../edit-profile/EditProfileScreen';
-import SettingsScreen from '../settings/SettingsScreen';
+import ProfileScreen from '../screens/profile/ProfileScreen';
+import EditProfileScreen from '../screens/edit-profile/EditProfileScreen';
+import SettingsScreen from '../screens/settings/SettingsScreen';
 
-const ProfileNav = StackNavigator(
+const Navigator = StackNavigator(
     {   
         Profile: {
             screen: ProfileScreen
@@ -22,12 +22,12 @@ const ProfileNav = StackNavigator(
     }
 );
 
-class ProfileNavScreen extends React.Component {
+class ProfileNavigator extends React.Component {
     render() {
         return (
-                <ProfileNav />
+                <Navigator />
         );
     }
 }
 
-export default ProfileNavScreen;
+export default ProfileNavigator;

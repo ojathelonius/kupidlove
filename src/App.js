@@ -2,14 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
-import HomeScreen from './screens/home/HomeScreen';
-import SearchScreen from './screens/search/SearchScreen';
-import LoginScreen from './screens/login/LoginScreen';
-import LoginMailScreen from './screens/login-mail/LoginMailScreen';
-import HubScreen from './screens/hub/HubScreen';
 import configureStore from './setup/configureStore';
 import * as Expo from "expo";
-import navService from './middleware/navService';
+import HomeNavigator from './navigators/HomeNavigator';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,30 +14,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-const Navigator = StackNavigator(
-  {
-    Home: {
-      screen: HomeScreen
-    },
-    Search: {
-      screen: SearchScreen
-    },
-    Login: {
-      screen: LoginScreen
-    },
-    LoginMail: {
-      screen: LoginMailScreen
-    },
-    Hub: {
-      screen: HubScreen
-    }
-  },
-  {
-    initialRouteName: 'Home',
-    headerMode: 'none'
-  }
-);
 
 class App extends React.Component {
 
@@ -70,9 +41,7 @@ class App extends React.Component {
     }
     return (
       <Provider store={this.state.store}>
-        <Navigator ref={navigatorRef => {
-          navService.setContainer(navigatorRef);
-        }}/>
+        <HomeNavigator />
       </Provider>
     );
   }

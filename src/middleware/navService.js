@@ -3,7 +3,7 @@ import { NavigationParams, NavigationRoute } from 'react-navigation';
 
 
 /* navService allows using navigate events throughout the app, even outside of components */
-/* See https://github.com/react-navigation/react-navigation/issues/840 */
+/* See https://github.com/react-navigation/react-navigation/issues/1439 */
 
 let _container; 
 

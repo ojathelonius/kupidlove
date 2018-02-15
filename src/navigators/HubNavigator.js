@@ -2,16 +2,16 @@ import React from 'react';
 import { TabNavigator } from 'react-navigation';
 import { View } from "native-base";
 import { Platform } from "react-native";
-import ProfileNavScreen from './ProfileNavScreen';
-import SearchScreen from '../search/SearchScreen';
-import ChatScreen from '../chat/ChatScreen';
-import EditProfileScreen from '../edit-profile/EditProfileScreen';
-import NavBar from '../../components/NavBar/NavBar'
+import ProfileNavigator from './ProfileNavigator';
+import SearchScreen from '../screens/search/SearchScreen';
+import ChatScreen from '../screens/chat/ChatScreen';
+import EditProfileScreen from '../screens/edit-profile/EditProfileScreen';
+import NavBar from '../components/NavBar/NavBar'
 
-const HubNavigator = TabNavigator(
+const Navigator = TabNavigator(
     {
         Profile: {
-            screen: ProfileNavScreen
+            screen: ProfileNavigator
         },
         Search: {
             screen: SearchScreen
@@ -28,12 +28,12 @@ const HubNavigator = TabNavigator(
     }
 );
 
-class HubScreen extends React.Component {
+class HubNavigator extends React.Component {
     render() {
         return (
-                <HubNavigator />
+                <Navigator />
         );
     }
 }
 
-export default HubScreen;
+export default HubNavigator;
