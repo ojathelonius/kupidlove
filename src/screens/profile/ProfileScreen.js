@@ -27,7 +27,7 @@ class ProfileScreen extends React.Component {
 
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("Settings")}
+              onPress={() => this.props.navigation.navigate("EditProfile")}
               style={styles.profileButton}
             >
 
