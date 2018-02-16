@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Dimensions, Image, StatusBar, Platform, Keyboard } from "react-native";
 import { View, Container, Header, Content, Form, Item, Input, Label, H2, Button, Text, Icon, Title } from 'native-base';
 import { Field, reduxForm } from 'redux-form';
@@ -11,19 +10,12 @@ import { loginEmail } from '../../actions/authActions';
 
 var deviceHeight = Dimensions.get("window").height;
 
-const mapStateToProps = (state) => {
-  return ({
-      showErrorToast : state.auth.showErrorToast,
-      errorToastMessage : state.auth.errorToastMessage
-  })
-}
-
 /* Component */
 class LoginMailScreen extends React.Component {
 
   submit(input, dispatch, props) {
     dispatch(loginEmail(input.email, input.password));
-    Keyboard.dismiss(); 
+    Keyboard.dismiss();
   }
 
   render() {
@@ -53,10 +45,6 @@ class LoginMailScreen extends React.Component {
     );
   }
 }
-
-LoginMailScreen = connect(
-  mapStateToProps
-)(LoginMailScreen);
 
 export default reduxForm({
   form: 'LoginMail'

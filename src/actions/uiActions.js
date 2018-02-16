@@ -9,3 +9,9 @@ export const showAlert = (title, message) => {
      } 
 }
 
+export const hideTabBar = () => {
+     return {
+         type: actions.HIDE_TAB_NAVIGATOR
+     }
+}
+

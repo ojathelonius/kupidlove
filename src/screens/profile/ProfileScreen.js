@@ -3,10 +3,29 @@ import { Image, View, TouchableOpacity } from "react-native";
 import { Container, Content, Icon, Button, Text } from "native-base";
 import commonColor from "../../theme/variables/commonColor";
 import styles from "./ProfileScreenStyle";
+import { hideTabBar } from '../../actions/uiActions';
+import { connect } from 'react-redux';
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    navigateTo: (screen) => {
+      dispatch(hideTabBar());
+      ownProps.navigation.navigate(screen);
+    }
+});
+
+const mapStateToProps = (state) => {
+  return state;
+}
 
 
 class ProfileScreen extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+
     return (
       <Container style={styles.container}>
         <Content scrollEnabled={false}>
@@ -27,7 +46,7 @@ class ProfileScreen extends React.Component {
 
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("EditProfile")}
+              onPress={() => this.props.navigateTo("EditProfile")}
               style={styles.profileButton}
             >
 
@@ -39,7 +58,7 @@ class ProfileScreen extends React.Component {
             </Button>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("Settings")}
+              onPress={() => this.props.navigateTo("Settings")}
               style={styles.profileButton}
             >
 
@@ -56,4 +75,7 @@ class ProfileScreen extends React.Component {
   }
 }
 
-export default ProfileScreen;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProfileScreen);
