@@ -36,3 +36,7 @@ Il y a probablement un élément dans un composant utilisé avec un opérateur d
 
 ### Impossible d'accéder aux redux-devtools depuis Chrome
 Utiliser l'extension [Allow CORS](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi/related?hl=en).
+
+### Bug lié au state (écrasement de l'initial state...)
+Le state est persisté bien sûr... Ce n'est pas un bug de cache d'Expo, voir configureStore.js.
+Le state initial n'est pas forcément celui qui sera utilisé au lancement de l'application.
