@@ -2,16 +2,11 @@ import React from 'react';
 import style from "./NavBarStyle.js";
 import { NavigationActions } from 'react-navigation';
 import { Icon, Header, FooterTab, Button, View } from "native-base";
-import { connect } from 'react-redux';
-
-const mapStateToProps = (state) => ({
-    shouldDisplay: state.tab.shouldDisplay
-})
 
 class NavBar extends React.Component {
 
     render() {
-        return this.props.shouldDisplay ? (
+        return (
             <View style={style.navContainer}>
                 <Header style={style.header}>
                     <FooterTab style={style.footerTab}>
@@ -53,10 +48,8 @@ class NavBar extends React.Component {
                     </FooterTab>
                 </Header>
             </View>
-        ) : null;
+        );
     }
 }
 
-export default connect(
-    mapStateToProps
-)(NavBar);
+export default NavBar;

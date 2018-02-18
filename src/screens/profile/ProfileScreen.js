@@ -3,12 +3,10 @@ import { Image, View, TouchableOpacity } from "react-native";
 import { Container, Content, Icon, Button, Text } from "native-base";
 import commonColor from "../../theme/variables/commonColor";
 import styles from "./ProfileScreenStyle";
-import { hideTabBar } from '../../actions/uiActions';
 import { connect } from 'react-redux';
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     navigateTo: (screen) => {
-      dispatch(hideTabBar());
       ownProps.navigation.navigate(screen);
     }
 });

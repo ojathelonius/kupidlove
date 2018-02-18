@@ -8,10 +8,3 @@ export const showAlert = (title, message) => {
          message
      } 
 }
-
-export const hideTabBar = () => {
-     return {
-         type: actions.HIDE_TAB_NAVIGATOR
-     }
-}
-

@@ -5,27 +5,29 @@ import EditProfileScreen from '../screens/edit-profile/EditProfileScreen';
 import SettingsScreen from '../screens/settings/SettingsScreen';
 
 const Navigator = StackNavigator(
-    {   
+    {
         Profile: {
-            screen: ProfileScreen
+            screen: ProfileScreen,
+            navigationOptions: {
+                header: null
+            }
         },
         EditProfile: {
-            screen: EditProfileScreen
+            screen: EditProfileScreen,
         },
         Settings: {
-            screen: SettingsScreen
+            screen: SettingsScreen,
         },
     },
     {
-        initialRouteName: 'Profile',
-        headerMode: 'none'
+        initialRouteName: 'Profile'
     }
 );
 
 class ProfileNavigator extends React.Component {
     render() {
         return (
-                <Navigator />
+            <Navigator />
         );
     }
 }
