@@ -3,6 +3,7 @@ import { StackNavigator } from 'react-navigation';
 import ProfileScreen from '../screens/profile/ProfileScreen';
 import EditProfileScreen from '../screens/edit-profile/EditProfileScreen';
 import SettingsScreen from '../screens/settings/SettingsScreen';
+import NestedNavBar from '../components/NestedNavBar/NestedNavBar';
 
 const Navigator = StackNavigator(
     {
@@ -14,13 +15,19 @@ const Navigator = StackNavigator(
         },
         EditProfile: {
             screen: EditProfileScreen,
+            navigationOptions: {
+                header: props => (<NestedNavBar {...props} title = 'Modification du profil'/>)
+            }
         },
         Settings: {
             screen: SettingsScreen,
+            navigationOptions: {
+                header: props => (<NestedNavBar {...props} title = 'Paramètres'/>)
+            }
         },
     },
     {
-        initialRouteName: 'Profile'
+        initialRouteName: 'Profile',
     }
 );
 

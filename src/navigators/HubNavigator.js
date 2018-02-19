@@ -6,7 +6,7 @@ import ProfileNavigator from './ProfileNavigator';
 import SearchScreen from '../screens/search/SearchScreen';
 import ChatScreen from '../screens/chat/ChatScreen';
 import EditProfileScreen from '../screens/edit-profile/EditProfileScreen';
-import NavBar from '../components/NavBar/NavBar'
+import TabBar from '../components/TabBar/TabBar'
 
 const Navigator = TabNavigator(
     {
@@ -21,7 +21,7 @@ const Navigator = TabNavigator(
         }
     },
     {
-        tabBarComponent: props => (<NavBar {...props}/>),
+        tabBarComponent: props => (<TabBar {...props}/>),
         tabBarPosition: 'top',
         animationEnabled: true,
         swipeEnabled: false

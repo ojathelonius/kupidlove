@@ -1,9 +1,9 @@
 import React from 'react';
-import style from "./NavBarStyle.js";
+import style from "./TabBarStyle.js";
 import { NavigationActions } from 'react-navigation';
 import { Icon, Header, FooterTab, Button, View } from "native-base";
 
-class NavBar extends React.Component {
+class TabBar extends React.Component {
 
     render() {
         return (
@@ -52,4 +52,4 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar;
+export default TabBar;
