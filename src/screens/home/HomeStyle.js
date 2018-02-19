@@ -40,8 +40,10 @@ export default {
         fontSize: 60
     },
     iconContainer: {
-        flex: 4,
-        justifyContent: 'flex-end',
         alignItems: 'center'
+    },
+    logoStyle: {
+        height: 200,
+        resizeMode: 'contain'
     }
 };
