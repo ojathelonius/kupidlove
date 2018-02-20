@@ -25,3 +25,15 @@ export const loginEmail = (email, password) => ((dispatch) => {
         })
         .catch((error) => dispatch(showAlert('Erreur', `Erreur lors de l'envoi de la requête.`)));
 })
+
+export const checkAuthAndRedirect = (route) => ((dispatch) => {
+    storage.retrieve('jwt')
+        .then((jwt) => {
+            if (jwt == null && navService.getCurrentRoute() !== 'HubNavigator') {
+                navService.navigate('HubNavigator')
+            } else if (route && route != '') {
+                navService.navigate(route)
+            }
+        })
+        .catch((error) => dispatch(showAlert('Erreur', `Erreur : vous n'êtes pas connecté.`)));
+})
