@@ -29,11 +29,18 @@ export const loginEmail = (email, password) => ((dispatch) => {
 export const checkAuthAndRedirect = (route) => ((dispatch) => {
     storage.retrieve('jwt')
         .then((jwt) => {
-            if (jwt == null && navService.getCurrentRoute() !== 'HubNavigator') {
-                navService.navigate('HubNavigator')
+            if (jwt == null && navService.getCurrentRoute() !== 'HomeNavigator') {
+                navService.navigate('HomeNavigator')
             } else if (route && route != '') {
                 navService.navigate(route)
             }
         })
         .catch((error) => dispatch(showAlert('Erreur', `Erreur : vous n'êtes pas connecté.`)));
+})
+
+export const logoutAndRedirect = () => ((dispatch) => {
+    console.log('test');
+    storage.remove('jwt')
+        .then(() => navService.navigate('Home'))
+        .catch((error) => console.log(error));
 })

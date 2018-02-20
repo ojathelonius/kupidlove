@@ -15,4 +15,8 @@ export default class Storage {
     static retrieve(key) {
         return AsyncStorage.getItem(key);
     }
+
+    static remove(key) {
+        return AsyncStorage.removeItem(key);
+    }
 }

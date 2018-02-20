@@ -4,11 +4,13 @@ import { Container, Content, Icon, Button, Text } from "native-base";
 import commonColor from "../../theme/variables/commonColor";
 import styles from "./ProfileScreenStyle";
 import { connect } from 'react-redux';
+import { logoutAndRedirect } from '../../actions/authActions';
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    navigateTo: (screen) => {
-      ownProps.navigation.navigate(screen);
-    }
+  navigateTo: (screen) => {
+    ownProps.navigation.navigate(screen);
+  },
+  logout: () => dispatch(logoutAndRedirect())
 });
 
 const mapStateToProps = (state) => {
@@ -65,6 +67,18 @@ class ProfileScreen extends React.Component {
                 style={{ color: commonColor.brandPrimary }}
               />
               <Text style={styles.profileButtonText}>Paramètres</Text>
+            </Button>
+            <Button
+              transparent
+              onPress={() => this.props.logout()}
+              style={styles.profileButton}
+            >
+
+              <Icon
+                name="md-log-out"
+                style={{ color: commonColor.brandPrimary }}
+              />
+              <Text style={styles.profileButtonText}>Déconnexion</Text>
             </Button>
           </View>
         </Content>
