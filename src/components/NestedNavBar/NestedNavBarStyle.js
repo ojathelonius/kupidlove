@@ -36,5 +36,9 @@ export default {
     title :{
         fontSize: 17,
         textAlign: 'center'
+    },
+    bigTitle :{
+        fontSize: 21,
+        textAlign: 'center'
     }
 };

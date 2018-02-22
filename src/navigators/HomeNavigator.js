@@ -5,6 +5,7 @@ import HomeScreen from '../screens/home/HomeScreen';
 import SearchScreen from '../screens/search/SearchScreen';
 import LoginScreen from '../screens/login/LoginScreen';
 import LoginMailScreen from '../screens/login-mail/LoginMailScreen';
+import SignUpScreen from '../screens/sign-up/SignUpScreen';
 import HubNavigator from './HubNavigator';
 import navService from '../middleware/navService';
 import { checkAuthAndRedirect } from '../actions/authActions';
@@ -22,6 +23,9 @@ const Navigator = StackNavigator(
         },
         LoginMail: {
             screen: LoginMailScreen
+        },
+        SignUp: {
+            screen: SignUpScreen
         },
         HubNavigator: {
             screen: HubNavigator

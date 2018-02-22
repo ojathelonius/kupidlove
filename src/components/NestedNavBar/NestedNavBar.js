@@ -20,7 +20,7 @@ class NestedNavBar extends React.Component {
                         </Button>
                     </View>
                     <View style={style.flexCenter}>
-                        <Text style={style.title}>{this.props.title}</Text>
+                        <Text style={this.props.bigTitle ? style.bigTitle : style.title}>{this.props.title}</Text>
                     </View>
                     <View style={style.flexRight} />
                 </View>

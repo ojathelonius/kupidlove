@@ -22,7 +22,7 @@ class HomeScreen extends React.Component {
             <Button block rounded style={style.connexionBtn} onPress={() => this.props.navigation.navigate('Login')}>
               <Text style={style.btnText}>Connexion</Text>
             </Button>
-            <Button block rounded style={style.inscriptionBtn}>
+            <Button block rounded style={style.inscriptionBtn} onPress={() => this.props.navigation.navigate('SignUp')}>
               <Text style={style.btnText}>Inscription</Text>
             </Button>
           </View>
