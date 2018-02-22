@@ -12,7 +12,7 @@ class NestedNavBar extends React.Component {
         });
 
         return (
-            <View style={style.navContainer}>
+            <View style={this.props.paddingTop ? style.navContainerWithPadding : style.navContainer}>
                 <View style={style.flexContainer}>
                     <View style={style.flexLeft}>
                         <Button transparent onPress={() => this.props.navigation.dispatch(backAction)}>

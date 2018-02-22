@@ -10,6 +10,11 @@ export default {
         height: 50,
         backgroundColor: '#ffffff'
     },
+    navContainerWithPadding: {
+        height: 80,
+        backgroundColor: '#ffffff',
+        paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight
+    },
     flexContainer: {
         flex: 1,
         flexDirection: 'row',
