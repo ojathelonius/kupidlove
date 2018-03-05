@@ -39,7 +39,6 @@ export const checkAuthAndRedirect = (route) => ((dispatch) => {
 })
 
 export const logoutAndRedirect = () => ((dispatch) => {
-    console.log('test');
     storage.remove('jwt')
         .then(() => navService.navigate('Home'))
         .catch((error) => console.log(error));

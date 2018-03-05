@@ -19,7 +19,7 @@ export default {
     fontWeight: "500"
   },
   signUpBtn: {
-    marginTop: 30,
+    marginTop: 40,
     width: deviceWidth - 120,
     alignSelf: "center",
     backgroundColor: "#D80A21"
