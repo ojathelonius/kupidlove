@@ -2,7 +2,7 @@ import React from 'react';
 import { Dimensions, Image, StatusBar, Platform, Keyboard } from "react-native";
 import { View, Container, Header, Content, Form, Item, Input, Label, H2, Button, Text, Icon, Title } from 'native-base';
 import { Field, reduxForm } from 'redux-form';
-import style from "./LoginMailStyle.js";
+import style from "./LoginMailScreenStyle.js";
 import commonColor from "../../theme/variables/commonColor";
 import BackButton from '../../components/BackButton/BackButton';
 import FormInput from '../../components/FormInput/FormInput';

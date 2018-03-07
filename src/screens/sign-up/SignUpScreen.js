@@ -5,7 +5,7 @@ import { Field, reduxForm } from 'redux-form';
 import FormInput from '../../components/FormInput/FormInput';
 import FormRadioButton from '../../components/FormRadioButton/FormRadioButton';
 import Swiper from "react-native-swiper";
-import style from "./SignUpStyle.js";
+import style from "./SignUpScreenStyle.js";
 import commonColor from "../../theme/variables/commonColor";
 import NestedNavBar from '../../components/NestedNavBar/NestedNavBar';
 

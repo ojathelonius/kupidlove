@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageBackground, Image, View } from 'react-native';
 import { Content, Text, Button, Icon } from "native-base";
-import style from "./HomeStyle.js";
+import style from "./HomeScreenStyle.js";
 
 class HomeScreen extends React.Component {
   render() {

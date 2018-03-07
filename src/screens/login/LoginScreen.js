@@ -2,7 +2,7 @@ import React from 'react';
 import { Dimensions, Image, StatusBar, Platform } from "react-native";
 import { Container, Content, Text, Button, View } from "native-base";
 import Swiper from "react-native-swiper";
-import style from "./LoginStyle.js";
+import style from "./LoginScreenStyle.js";
 import commonColor from "../../theme/variables/commonColor";
 
 var deviceHeight = Dimensions.get("window").height;
