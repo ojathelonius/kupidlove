@@ -14,10 +14,10 @@ import {
   List
 } from "native-base";
 import { View, Text } from 'react-native';
-import style from "./ChatScreenStyle";
+import style from "./ChatListScreenStyle";
 import data from "../../data/conversations";
 
-class ChatScreen extends React.Component {
+class ChatListScreen extends React.Component {
   render() {
     return (
       <View style={style.viewStyle}>
@@ -51,4 +51,4 @@ class ChatScreen extends React.Component {
   }
 }
 
-export default ChatScreen;
+export default ChatListScreen;

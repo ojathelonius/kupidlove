@@ -34,7 +34,7 @@ class TabBar extends React.Component {
                             />
                         </Button>
 
-                        <Button onPress={() => this.props.navigation.navigate("Chat")}>
+                        <Button onPress={() => this.props.navigation.navigate("ChatList")}>
                             <Icon
                                 name="md-chatboxes"
                                 size={20}
