@@ -4,7 +4,7 @@ import { View } from "native-base";
 import { Platform } from "react-native";
 import ProfileNavigator from './ProfileNavigator';
 import SearchScreen from '../screens/search/SearchScreen';
-import ChatListScreen from '../screens/chat-list/ChatListScreen';
+import ChatNavigator from './ChatNavigator';
 import EditProfileScreen from '../screens/edit-profile/EditProfileScreen';
 import TabBar from '../components/TabBar/TabBar'
 
@@ -17,7 +17,7 @@ const Navigator = TabNavigator(
             screen: SearchScreen
         },
         ChatList: {
-            screen: ChatListScreen
+            screen: ChatNavigator
         }
     },
     {

@@ -6,6 +6,7 @@
     "native-base": "^2.3.8",
     "react": "16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react-native-gifted-chat": "^0.4.1",
     "react-native-swiper": "^1.5.13",
     "react-navigation": "git://github.com/react-navigation/react-navigation.git#master",
     "react-redux": "^5.0.6",

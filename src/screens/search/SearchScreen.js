@@ -45,7 +45,6 @@ class SearchScreen extends React.Component {
                     style={style.deckswiperImageCarditem}
                     activeOpacity={1}
                     cardBody
-                    onPress={() => navigation.navigate("PhotoCardDetails")}
                   >
                     <ImageBackground style={style.cardMain} source={item.image}>
                       {this.state.direction === "left" &&
@@ -113,7 +112,6 @@ class SearchScreen extends React.Component {
                   <CardItem
                     button
                     activeOpacity={1}
-                    onPress={() => navigation.navigate("PhotoCardDetails")}
                     style={style.deckswiperDetailsCarditem}
                   >
                     <Body>

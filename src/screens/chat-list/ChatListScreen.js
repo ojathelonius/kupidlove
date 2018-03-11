@@ -14,14 +14,35 @@ import {
   List
 } from "native-base";
 import { View, Text } from 'react-native';
+import { connect } from 'react-redux';
 import style from "./ChatListScreenStyle";
 import data from "../../data/conversations";
 
+
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  navigateToChat: (name) => {
+    ownProps.navigation.navigate({
+      routeName: "Chat",
+      params: { name: name }
+    });
+  }
+});
+
+const mapStateToProps = (state) => {
+  return state;
+}
+
 class ChatListScreen extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <View style={style.viewStyle}>
-        <Content style={{flex: 1}}>
+        <Content style={{ flex: 1 }}>
           <List
             removeClippedSubviews={false}
             style={{ marginTop: 7 }}
@@ -31,6 +52,7 @@ class ChatListScreen extends React.Component {
                 avatar
                 button
                 style={{ marginLeft: 15 }}
+                onPress={() => this.props.navigateToChat(dataRow.name)}
               >
                 <Left>
                   <Thumbnail round source={dataRow.thumbnail} />
@@ -51,4 +73,7 @@ class ChatListScreen extends React.Component {
   }
 }
 
-export default ChatListScreen;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ChatListScreen);
